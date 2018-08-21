@@ -5,12 +5,12 @@
 
     </thead>
     <tbody>
-        {% regroup orders by order_number as orders_by_datetime %} {% for datetime in orders_by_datetime %}
+        {% regroup orders by order_number as orders_by_order_number %} {% for order_number in orders_by_order_number %}
         <tr>
-            <td>收據編號:{{datetime.grouper}}</td>
+            <td>收據編號:{{order_number.grouper}}</td>
         </tr>
         <tr>
-            <td>購買時間:{{datetime.list.0.datetime}}</td>
+            <td>購買時間:{{order_number.list.0.datetime}}</td>
         </tr>
         <tr>
                 <th style="border:3px solid white;text-align: center">商品名稱</th>
@@ -18,7 +18,7 @@
                 <th style="border:3px solid white;text-align: center">商品購買數量</th>
                 <th style="border:3px solid white;text-align: center">商品購買總價格</th>
             </tr>
-        {% for order in datetime.list %}
+        {% for order in order_number.list %}
         <tr>
 
             <td style="border:3px solid white">{{order.product_name}}</td>
