@@ -44,8 +44,8 @@ def create(request):
         # EMAIL_USE_TLS = True 
         # EMAIL_HOST = "smtp.gmail.com"
         # EMAIL_PORT = 587
-        # EMAIL_HOST_USER = "a11118825@gmail.com"
-        # EMAIL_HOST_PASSWORD = "a63475566"
+        # EMAIL_HOST_USER = ""
+        # EMAIL_HOST_PASSWORD = ""
         # from_email = EMAIL_HOST_USER
         # to_list = useremail
 
